@@ -1,0 +1,26 @@
+.warp {
+    display: grid;
+    justify-content: center;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.btnstyle {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.primary {
+    background: #ffe9c5;
+    width: 150px;
+}
+.importantbtn {
+    background: rgb(165, 252, 187);
+    width: 100px;
+    height: 30px;
+}
+.donebtn {
+    background: #888888;
+    width: 70px;
+}

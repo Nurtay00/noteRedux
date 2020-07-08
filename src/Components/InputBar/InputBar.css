@@ -1,0 +1,17 @@
+.inputbar {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+.input {
+    width: 300px;
+    height: 30px;
+    display: block;
+    border-radius: 7px;
+}
+.inputBtn {
+    margin-left: 20px;
+    background: #12cad6;
+    display: block;
+    border-radius: 7px;
+}

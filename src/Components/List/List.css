@@ -1,0 +1,35 @@
+.list {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.all {
+    margin-left: 10px;
+}
+.done {
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+.imp {
+    margin-left: 10px;
+    color: brown;
+    font-weight: bold;
+}
+.toimp {
+    font-size: 16px;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.todelete {
+    font-size: 16px;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

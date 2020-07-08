@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import "./App.css";
+import Mainpage from "./Pages/Mainpage/Mainpage";
+import { connect } from "react-redux";
+// import information from "./Store/Reducer/information";
+import {
+  add,
+  imp,
+  allimp,
+  all,
+  done,
+  alldone,
+  ondelete,
+  onall,
+} from "./Store/action/action";
+function App(props: any) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Mainpage {...props} />
     </div>
   );
 }
-
-export default App;
+function mapStateToProps(state: {
+  information: { list: string; status: string };
+}) {
+  return {
+    information: state,
+  };
+}
+function mapDispatchToProps(dispatch: any) {
+  return {
+    onAdd: (value: any) => dispatch(add(value)),
+    onImp: (value: any) => dispatch(imp(value)),
+    onDone: (value: any) => dispatch(done(value)),
+    onAll: (value: any) => dispatch(onall(value)),
+    onDelete: (value: any) => dispatch(ondelete(value)),
+    statusImp: () => dispatch(allimp()),
+    statusAll: () => dispatch(all()),
+    statusDone: () => dispatch(alldone()),
+  };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App);
